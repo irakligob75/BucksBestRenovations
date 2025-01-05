@@ -13,7 +13,16 @@
     <section id="modern-kitchen">
         <h2>Modern Kitchen</h2>
         <div class="kitchen-gallery">
-            <!-- აქ ჩასვი ფოტოების კოდი -->
+            <div class="kitchen-gallery">
+    <img src="bailey-alexander-cYeCxtKpTTQ-unsplash.jpg" alt="Modern Kitchen 1">
+    <img src="becca-tapert-sY5RjMB1KkE-unsplash.jpg" alt="Modern Kitchen 2">
+    <img src="charlesdeluvio-xC3cHbp4XJE-unsplash.jpg" alt="Modern Kitchen 3">
+    <img src="christian-mackie-cc0Gg3BegjE-unsplash.jpg" alt="Modern Kitchen 4">
+    <img src="jason-briscoe-GliaHAJ3_5A-unsplash.jpg" alt="Modern Kitchen 5">
+    <img src="naomi-hebert-MP0bgaS_d1c-unsplash.jpg" alt="Modern Kitchen 6">
+    <img src="odiseo-castrejon-CX8ooha2yLA-unsplash.jpg" alt="Modern Kitchen 7">
+</div>
+!-- აქ ჩასვი ფოტოების კოდი -->
         </div>
     </section>
 </body>
