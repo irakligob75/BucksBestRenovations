@@ -35,13 +35,15 @@ header p {
 }
 
 .kitchen-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px; /* სივრცე სურათებს შორის */
+    margin-top: 20px;
 }
 
 .kitchen-gallery img {
-    width: 100%;
+    width: 32%; /* თითოეული სურათის განაწილება */
     height: auto;
     border-radius: 10px;
     cursor: pointer;
