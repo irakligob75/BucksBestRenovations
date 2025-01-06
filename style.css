@@ -1,27 +1,55 @@
-/* Lightbox Styles */
-.lightbox-modal {
-    display: none; /* არ ჩანს მანამდე */
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+section {
+    padding: 20px;
+}
+
+#modern-kitchen h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.kitchen-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.kitchen-gallery img {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* ნახევრად გამჭვირვალე შავი ფონი */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox-modal img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    color: white;
+    height: auto;
     cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.kitchen-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 
