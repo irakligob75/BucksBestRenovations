@@ -44,15 +44,28 @@ section {
     gap: 10px;
 }
 
+.kitchen-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* სამი სვეტი */
+    gap: 10px;
+}
+
 .kitchen-gallery img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.kitchen-gallery img:hover {
-    transform: scale(1.05);
+.kitchen-gallery .small-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ორი სვეტი */
+    gap: 10px;
+}
+
+.kitchen-gallery .small-images img {
+    width: 100%;
+    height: auto;
 }
 
 footer {
