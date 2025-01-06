@@ -22,18 +22,52 @@
     <section id="modern-kitchen">
         <h2>Kitchen Renovation</h2>
         <div class="kitchen-gallery">
-            <img src="bailey-alexander-cYeCxtKpTTQ-unsplash.jpg" alt="Modern Kitchen 1">
-            <img src="becca-tapert-sY5RjMB1KkE-unsplash.jpg" alt="Modern Kitchen 2">
-            <img src="charlesdeluvio-xC3cHbp4XJE-unsplash.jpg" alt="Modern Kitchen 3">
-            <img src="christian-mackie-cc0Gg3BegjE-unsplash.jpg" alt="Modern Kitchen 4">
-            <img src="jason-briscoe-GliaHAJ3_5A-unsplash.jpg" alt="Modern Kitchen 5">
-            <img src="naomi-hebert-MP0bgaS_d1c-unsplash.jpg" alt="Modern Kitchen 6">
-            <img src="odiseo-castrejon-CX8ooha2yLA-unsplash.jpg" alt="Modern Kitchen 7">
+            <img src="bailey-alexander-cYeCxtKpTTQ-unsplash.jpg" alt="Modern Kitchen 1" class="thumbnail">
+            <img src="becca-tapert-sY5RjMB1KkE-unsplash.jpg" alt="Modern Kitchen 2" class="thumbnail">
+            <img src="charlesdeluvio-xC3cHbp4XJE-unsplash.jpg" alt="Modern Kitchen 3" class="thumbnail">
+            <img src="christian-mackie-cc0Gg3BegjE-unsplash.jpg" alt="Modern Kitchen 4" class="thumbnail">
+            <img src="jason-briscoe-GliaHAJ3_5A-unsplash.jpg" alt="Modern Kitchen 5" class="thumbnail">
+            <img src="naomi-hebert-MP0bgaS_d1c-unsplash.jpg" alt="Modern Kitchen 6" class="thumbnail">
+            <img src="odiseo-castrejon-CX8ooha2yLA-unsplash.jpg" alt="Modern Kitchen 7" class="thumbnail">
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Bucks Best Renovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        const images = document.querySelectorAll('.thumbnail');
+        const overlay = document.createElement('div');
+        const fullImage = document.createElement('img');
+        
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100vw';
+        overlay.style.height = '100vh';
+        overlay.style.background = 'rgba(0, 0, 0, 0.8)';
+        overlay.style.display = 'none';
+        overlay.style.justifyContent = 'center';
+        overlay.style.alignItems = 'center';
+        overlay.style.zIndex = 1000;
+
+        fullImage.style.maxWidth = '90%';
+        fullImage.style.maxHeight = '90%';
+        overlay.appendChild(fullImage);
+
+        document.body.appendChild(overlay);
+
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                fullImage.src = img.src;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
