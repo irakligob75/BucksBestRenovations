@@ -3,76 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bucks Best Renovations</title>
+    <title>Bucks Best Renovations - Kitchen Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Welcome to Bucks Best Renovations</h1>
+        <p>Your trusted partner for kitchen, bathroom, and home renovations</p>
         <nav>
             <ul>
-                <li><a href="kitchen.html">Kitchen Renovation</a></li>
-                <li><a href="bathroom.html">Bathroom Renovation</a></li>
-                <li><a href="bedroom.html">Bedroom Renovation</a></li>
-                <li><a href="hotel.html">Hotel Renovation</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+                <li><a href="bathroom.html">Bathroom</a></li>
+                <li><a href="bedroom.html">Bedroom</a></li>
+                <li><a href="hotel.html">Hotel</a></li>
             </ul>
         </nav>
     </header>
 
-   <section id="modern-kitchen">
-    <h2>Modern Kitchen</h2>
-    <div class="kitchen-gallery">
-        <!-- დიდი ზომის სურათები -->
-        <img src="bailey-alexander-cYeCxtKpTTQ-unsplash.jpg" alt="Modern Kitchen 1">
-        <img src="becca-tapert-sY5RjMB1KkE-unsplash.jpg" alt="Modern Kitchen 2">
-        <img src="charlesdeluvio-xC3cHbp4XJE-unsplash.jpg" alt="Modern Kitchen 3">
+    <main>
+        <section id="modern-kitchen">
+            <h2>Modern Kitchen</h2>
+            <div class="kitchen-gallery">
+                <!-- დიდი ზომის სურათები -->
+                <img src="bailey-alexander-cYeCxtKpTTQ-unsplash.jpg" alt="Modern Kitchen 1">
+                <img src="becca-tapert-sY5RjMB1KkE-unsplash.jpg" alt="Modern Kitchen 2">
+                <img src="charlesdeluvio-xC3cHbp4XJE-unsplash.jpg" alt="Modern Kitchen 3">
 
-        <!-- პატარა ზომის სურათები ქვემოდან -->
-        <div class="small-images">
-            <img src="christian-mackie-cc0Gg3BegjE-unsplash.jpg" alt="Modern Kitchen 4">
-            <img src="jason-briscoe-GliaHAJ3_5A-unsplash.jpg" alt="Modern Kitchen 5">
-            <img src="naomi-hebert-MP0bgaS_d1c-unsplash.jpg" alt="Modern Kitchen 6">
-            <img src="odiseo-castrejon-CX8ooha2yLA-unsplash.jpg" alt="Modern Kitchen 7">
-        </div>
-    </div>
-</section>
+                <!-- პატარა ზომის სურათები -->
+                <div class="small-images">
+                    <img src="christian-mackie-cc0Gg3BegjE-unsplash.jpg" alt="Modern Kitchen 4">
+                    <img src="jason-briscoe-GliaHAJ3_5A-unsplash.jpg" alt="Modern Kitchen 5">
+                    <img src="naomi-hebert-MP0bgaS_d1c-unsplash.jpg" alt="Modern Kitchen 6">
+                    <img src="odiseo-castrejon-CX8ooha2yLA-unsplash.jpg" alt="Modern Kitchen 7">
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Bucks Best Renovations. All rights reserved.</p>
+        <p>© 2025 Bucks Best Renovations. All rights reserved.</p>
     </footer>
 
-    <script>
-        const images = document.querySelectorAll('.thumbnail');
-        const overlay = document.createElement('div');
-        const fullImage = document.createElement('img');
-        
-        overlay.style.position = 'fixed';
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = '100vw';
-        overlay.style.height = '100vh';
-        overlay.style.background = 'rgba(0, 0, 0, 0.8)';
-        overlay.style.display = 'none';
-        overlay.style.justifyContent = 'center';
-        overlay.style.alignItems = 'center';
-        overlay.style.zIndex = 1000;
-
-        fullImage.style.maxWidth = '90%';
-        fullImage.style.maxHeight = '90%';
-        overlay.appendChild(fullImage);
-
-        document.body.appendChild(overlay);
-
-        images.forEach(img => {
-            img.addEventListener('click', function() {
-                fullImage.src = img.src;
-                overlay.style.display = 'flex';
-            });
-        });
-
-        overlay.addEventListener('click', function() {
-            overlay.style.display = 'none';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
