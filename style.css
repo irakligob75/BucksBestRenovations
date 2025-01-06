@@ -71,6 +71,7 @@ header p {
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
+    object-fit: contain; /* შევცვალეთ cover-იდან contain-ზე */
     border-radius: 10px;
 }
 
