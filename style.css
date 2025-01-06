@@ -38,3 +38,23 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* სამაგიდო სტილი სურათებისთვის */
+.kitchen-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.kitchen-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* სურათებზე მიანიჭე ეფექტი */
+.kitchen-gallery img:hover {
+    transform: scale(1.05);
+}
