@@ -1,47 +1,68 @@
-/* Basic Styling */
+/* ძირითადი სტილები */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
+    background: #35424a;
+    color: #ffffff;
     padding: 20px 0;
+    text-align: center;
 }
 
-h1 {
+header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #e8491d;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
-section {
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Modern Kitchen Section */
+#modern-kitchen {
     padding: 20px;
-    text-align: center;
+    background: #ffffff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.kitchen-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
+#modern-kitchen h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
 }
 
 .kitchen-gallery {
@@ -68,9 +89,13 @@ section {
     height: auto;
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
