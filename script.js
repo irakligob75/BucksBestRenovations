@@ -1,32 +1,20 @@
-// JavaScript to handle click and zoom effect for images
-document.querySelectorAll('.kitchen-gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-        const overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-        overlay.style.display = 'flex';
-        overlay.style.justifyContent = 'center';
-        overlay.style.alignItems = 'center';
-        overlay.style.zIndex = 1000;
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
 
-        const enlargedImg = document.createElement('img');
-        enlargedImg.src = img.src;
-        enlargedImg.style.maxWidth = '90%';
-        enlargedImg.style.maxHeight = '90%';
-        enlargedImg.style.borderRadius = '10px';
-        enlargedImg.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    const imgClone = document.createElement("img");
+    imgClone.src = img.src;
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild);
+    }
+    lightbox.appendChild(imgClone);
+  });
+});
 
-        overlay.appendChild(enlargedImg);
-
-        // Close the overlay on click
-        overlay.addEventListener('click', () => {
-            overlay.remove();
-        });
-
-        document.body.appendChild(overlay);
-    });
+lightbox.addEventListener("click", () => {
+  lightbox.classList.remove("active");
 });
