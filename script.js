@@ -1,23 +1,20 @@
-const images = document.querySelectorAll('.kitchen-gallery img');
+// Get the modal
+var modal = document.getElementById("myModal");
 
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        const src = img.getAttribute('src');
-        const alt = img.getAttribute('alt');
+// Get the images and insert them inside the modal
+var images = document.getElementsByClassName("gallery-item");
+var modalImg = document.getElementById("img01");
 
-        const lightbox = document.createElement('div');
-        lightbox.classList.add('lightbox');
-        lightbox.innerHTML = `
-            <div class="lightbox-content">
-                <img src="${src}" alt="${alt}">
-                <span class="close">&times;</span>
-            </div>
-        `;
-        document.body.appendChild(lightbox);
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+}
 
-        const closeButton = lightbox.querySelector('.close');
-        closeButton.addEventListener('click', () => {
-            document.body.removeChild(lightbox);
-        });
-    });
-});
+// Get the <span> element to close the modal
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
