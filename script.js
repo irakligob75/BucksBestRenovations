@@ -1,19 +1,32 @@
-// ყველა სურათის და მოდალის ელემენტების მიღება
-const images = document.querySelectorAll('.gallery-img');
-const modal = document.getElementById('lightbox-modal');
-const modalImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.close-btn');
+// Get modal elements
+const modal = document.createElement("div");
+modal.className = "modal";
+document.body.appendChild(modal);
 
-// ფოტოზე კლიკისას მოდალის გახსნა
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        const fullSizeImg = image.getAttribute('data-fullsize'); // ვიღებთ data-fullsize
-        modalImg.src = fullSizeImg; // ვაყენებთ სურათს მოდალში
-        modal.style.display = 'flex'; // ვაჩვენებთ მოდალს
+const modalImg = document.createElement("img");
+modal.appendChild(modalImg);
+
+const closeModal = document.createElement("span");
+closeModal.innerHTML = "&times;";
+modal.appendChild(closeModal);
+
+// Add click event to all images
+const images = document.querySelectorAll(".kitchen-gallery img");
+images.forEach((img) => {
+    img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
     });
 });
 
-// მოდალის დახურვა
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none'; // ვმალავთ მოდალს
+// Close modal on click
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Close modal on outside click
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 });
