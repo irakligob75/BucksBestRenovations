@@ -1,35 +1,15 @@
-/* Style for the gallery */
-.kitchen-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.kitchen-gallery img {
-    width: 200px;
-    height: 150px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.kitchen-gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Lightbox Modal */
+/* Lightbox Styles */
 .lightbox-modal {
-   /* Lightbox Styles */
-.lightbox-modal {
-    display: none;
+    display: none; /* არ ჩანს მანამდე */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* ნახევრად გამჭვირვალე შავი ფონი */
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .lightbox-modal img {
