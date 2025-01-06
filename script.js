@@ -1,20 +1,18 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// Modal image function
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementById("close");
 
-// Get the images and insert them inside the modal
-var images = document.getElementsByClassName("gallery-item");
-var modalImg = document.getElementById("img01");
+const images = document.querySelectorAll('.kitchen-gallery img');
 
-for (var i = 0; i < images.length; i++) {
-    images[i].onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-}
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    });
+});
 
-// Get the <span> element to close the modal
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// Close the modal
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
