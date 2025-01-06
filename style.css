@@ -43,8 +43,9 @@ header p {
 }
 
 .kitchen-gallery img {
-    width: 32%; /* თითოეული სურათის განაწილება */
+    width: calc(33.33% - 10px); /* თითოეული სურათის სიგანე */
     height: auto;
+    object-fit: cover; /* ეს საშუალებას აძლევს სურათებს შეავსონ სივრცე */
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s ease;
