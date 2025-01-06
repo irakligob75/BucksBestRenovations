@@ -19,6 +19,8 @@
 
 /* Lightbox Modal */
 .lightbox-modal {
+   /* Lightbox Styles */
+.lightbox-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -28,20 +30,18 @@
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 9999;
 }
 
-#lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
-    margin: 0 auto;
+.lightbox-modal img {
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
 }
