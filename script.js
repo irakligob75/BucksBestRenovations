@@ -1,27 +1,18 @@
-// Get all images inside the gallery
-const images = document.querySelectorAll('.gallery img');
-
-// Get the lightbox container and its close button
+// Get all gallery images
+const images = document.querySelectorAll('.gallery-images img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox.querySelector('img');
-const closeBtn = lightbox.querySelector('.close');
+const closeButton = lightbox.querySelector('.close');
 
-// Add click event listeners to all images
+// Function to open the lightbox with the clicked image
 images.forEach(image => {
     image.addEventListener('click', () => {
-        lightbox.style.display = 'flex'; // Show the lightbox
-        lightboxImage.src = image.src;  // Set the clicked image as the lightbox image
+        lightbox.style.display = 'flex';
+        lightboxImage.src = image.src;
     });
 });
 
-// Add click event listener to the close button to hide the lightbox
-closeBtn.addEventListener('click', () => {
+// Close the lightbox when the close button is clicked
+closeButton.addEventListener('click', () => {
     lightbox.style.display = 'none';
-});
-
-// Optional: Add event listener to close lightbox when clicking outside the image
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
 });
