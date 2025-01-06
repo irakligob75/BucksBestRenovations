@@ -38,14 +38,14 @@ header p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px; /* სივრცე სურათებს შორის */
+    gap: 10px;
     margin-top: 20px;
 }
 
 .kitchen-gallery img {
     width: calc(33.33% - 10px); /* თითოეული სურათის სიგანე */
     height: auto;
-    object-fit: cover; /* ეს საშუალებას აძლევს სურათებს შეავსონ სივრცე */
+    object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -55,6 +55,7 @@ header p {
     transform: scale(1.05); /* სურათი ოდნავ იზრდება მაუსზე */
 }
 
+/* Lightbox სტილი */
 .lightbox {
     display: none;
     position: fixed;
@@ -69,7 +70,7 @@ header p {
 }
 
 .lightbox img {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 90%;
     object-fit: contain; /* შევცვალეთ cover-იდან contain-ზე */
     border-radius: 10px;
