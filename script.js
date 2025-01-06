@@ -1,18 +1,16 @@
-// Modal image function
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const closeBtn = document.getElementById("close");
+// Lightbox functionality for images
+const images = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.querySelector('#lightbox img');
+const closeBtn = document.querySelector('#lightbox .close');
 
-const images = document.querySelectorAll('.kitchen-gallery img');
-
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = image.src;
     });
 });
 
-// Close the modal
 closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
+    lightbox.style.display = 'none';
 });
